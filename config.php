@@ -4,7 +4,7 @@ return [
     'database' => [
         'name'          => 'todolist',
         'username'      => 'root',
-        'password'     => 'longzu2016!@#',
+        'password'     => '123456',
         'connection'    => 'mysql:host=127.0.0.1',
         'options'       => []
     ]
