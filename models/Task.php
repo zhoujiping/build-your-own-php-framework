@@ -2,8 +2,8 @@
 
 class Task 
 {
-    // 任务的描述
-    protected $description;
+    // 任务的描述,暂且用public,这里自行修改
+    public $description;
 
     // 该任务是否完成
     protected $completed;

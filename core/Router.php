@@ -2,33 +2,51 @@
 
 class Router
 {
-    protected $routes = [];
+    protected $routes = [
+        'GET'   => [],
+        'POST'  => []
+    ];
 
     public static function load($file)
     {
         $router = new static;
         
-        // 调用 $router->define([]);
         require $file;
-        
-        // 注意这里，静态方法中没有 $this 变量，不能 return $this;
+
         return $router;
     }
 
-    public function define($routes)
+    public function get($uri, $controller)
     {
-        $this->routes = $routes;
+        $this->routes['GET'][$uri] = $controller;
     }
 
-    public function direct($uri)
+    public function post($uri, $controller)
     {
-        // 如果数组中存在 $uri 这样的路由, 那么返回对应的路经
-        if (array_key_exists($uri, $this->routes)) {
-            return $this->routes[$uri];
-        }
-        
-        // 不存在，抛出异常，以后关于异常的可以自己定义一些，比如404异常，可以使用NotFoundException
-        throw new Exception('No route defined for this URI');
-    }    
+        $this->routes['POST'][$uri] = $controller;
+    }
 
+    public function direct($uri, $requestType)
+    {
+        if (array_key_exists($uri, $this->routes[$requestType])) {
+            return $this->callAction(
+                ...explode('@', $this->routes[$requestType][$uri])
+            );
+        }
+
+        throw new Exception('No route defined for this URI');
+    }
+    
+    private function callAction($controller, $action)
+    {
+        $controllerObj = new $controller;
+
+        if (! method_exists($controllerObj, $action)) {
+            throw new Exception(
+                "{$controller} does not respond to the {$action} action."
+            );
+        }
+
+        return $controllerObj->$action();
+    }
 }

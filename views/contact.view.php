@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contct</title>
-</head>
-<body>
-    <h1>Contact Page</h1>
-</body>
-</html>
+<?php require('partials/head.php'); ?>
+<?php require('partials/nav.php'); ?>
+
+<h1>Contact Page</h1>
+
+<?php require('partials/footer.php'); ?>

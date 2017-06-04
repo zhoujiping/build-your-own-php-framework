@@ -1,0 +1,18 @@
+nav>ul>li {
+    display: inline-block;
+    padding: 5px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+textarea {
+    display: block;
+}
+
+button {
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
