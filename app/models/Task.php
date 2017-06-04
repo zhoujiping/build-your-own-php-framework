@@ -1,5 +1,7 @@
 <?php 
 
+namespace App\Models;
+
 class Task 
 {
     // 任务的描述,暂且用public,这里自行修改

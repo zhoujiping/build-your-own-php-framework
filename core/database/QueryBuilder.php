@@ -19,7 +19,7 @@ use PDO;
 
         $statement->execute();
 
-        return $statement->fetchAll(PDO::FETCH_CLASS, $className);
+        return $statement->fetchAll(PDO::FETCH_CLASS, "App\\Models\\{$className}");
     }
 
     public function create($table, $parameters)
