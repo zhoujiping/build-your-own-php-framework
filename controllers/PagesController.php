@@ -1,14 +1,9 @@
 <?php 
 
+namespace App\Controllers;
+
 class PagesController
 {
-    public function home()
-    {
-        $tasks = App::get('database')->selectAll('tasks', 'Task');
-
-        return view('index', ['tasks' => $tasks]);
-    }
-
     public function about()
     {
         return view('about');
@@ -16,6 +11,6 @@ class PagesController
 
     public function contact()
     {
-        require view('contact');
+        return view('contact');
     }
 }

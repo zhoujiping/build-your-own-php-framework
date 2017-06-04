@@ -1,5 +1,7 @@
 <?php 
 
+namespace App\Core;
+
 class App
 {
     protected static $registries = [];
