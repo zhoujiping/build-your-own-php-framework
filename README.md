@@ -6,12 +6,14 @@
 
 一共有5个分支：
 
->  `the_first_refactoring` -  对应文章中目录： 第一次代码重构
->  `the_second_refactoring` -  对应文章中目录： 第二次代码重构
->  `the_third_refactoring` -  对应文章中目录： 第三次代码重构
->  `the_fourth_refactoring` -  对应文章中目录： 第四次代码重构
->   `master`                -  最后完成的代码
+```bash
 
+     `the_first_refactoring` -  对应文章中目录： 第一次代码重构
+     `the_second_refactoring` -  对应文章中目录： 第二次代码重构
+     `the_third_refactoring` -  对应文章中目录： 第三次代码重构
+     `the_fourth_refactoring` -  对应文章中目录： 第四次代码重构
+      `master`                -  最后完成的代码
+```
 
 ## 查阅和切换分支
 
