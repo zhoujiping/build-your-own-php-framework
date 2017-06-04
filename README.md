@@ -19,7 +19,7 @@
 
 ```bash
     # 复制代码
-    git clone https://github.com/zhoujiping/my-php-framework.git
+    git clone https://github.com/zhoujiping/build-your-own-php-framework.git
 
     # 切换分支
     git checkout the_first_refactoring
